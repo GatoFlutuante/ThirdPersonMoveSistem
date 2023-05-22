@@ -270,7 +270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   mainCamera: {fileID: 963194225}
-  cameraRotationSpeed: 25
+  cameraRotationSpeed: 100
   character: {fileID: 69960760}
 --- !u!4 &365552119
 Transform:
