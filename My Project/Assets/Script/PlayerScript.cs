@@ -17,10 +17,13 @@ public class PlayerScript : MonoBehaviour
     public GameObject character;
     Quaternion rotation;
     float angle;
+    Animator anim;
 
     private void Start()
     {
         controller = GetComponent<CharacterController>();
+        anim = character.GetComponent<Animator>();
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -51,6 +54,14 @@ public class PlayerScript : MonoBehaviour
 
         //Rotation by player
         PlayerRotation();
+
+        //Animations
+        Animations();
+    }
+
+    private void Animations()
+    {
+        anim.SetFloat("pMove", moveDirection.magnitude);
     }
 
     private void PlayerRotation()
